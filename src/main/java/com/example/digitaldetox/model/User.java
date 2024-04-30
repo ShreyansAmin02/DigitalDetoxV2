@@ -1,11 +1,20 @@
 package com.example.digitaldetox.model;
 
+
 public class User {
+
     private int account_id;
     private String email;
     private String username;
     private String password;
 
+    /**
+     * The following is the constructor for the users of this application
+     * @param account_id id for the user account
+     * @param username username for account
+     * @param password password for user (to be encrypted using SHA256)
+     * @param email email for user
+     */
 
     public User(int account_id, String username, String password, String email) {
         this.account_id = account_id;

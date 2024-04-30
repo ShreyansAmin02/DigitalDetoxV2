@@ -1,19 +1,14 @@
 package com.example.digitaldetox.model;
 
 public class UserAuthentication {
-    private IUserDAO userAccountDAO;
+    private final IUserDAO userAccountDAO;
     public UserAuthentication(IUserDAO userAccountDAO) {
         this.userAccountDAO = userAccountDAO;
     }
 
     //signup authentication
     public boolean isUsernameTaken(String username) {
-        if (userAccountDAO.getUserByUsername(username) == null) {
-            return false;
-        }
-        else {
-            return true;
-        }
+        return userAccountDAO.getUserByUsername(username) != null;
 
     }
 
@@ -51,22 +46,12 @@ public class UserAuthentication {
                     lowercase++;
                 }
             }
-            if ((uppercase > 0) && (lowercase > 0) && (digit > 0)) {
-                return true;
-            }
-            else {
-                return false;
-            }
+            return (uppercase > 0) && (lowercase > 0) && (digit > 0);
         }
     }
 
     public boolean doesPasswordMatchConfirmPassword(String password, String confirmPassword) {
-        if (password.equals(confirmPassword)) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return password.equals(confirmPassword);
     }
 
 
@@ -79,11 +64,8 @@ public class UserAuthentication {
         }
         else {
             User user = userAccountDAO.getUserByUsername(username);
-            if (user.getPassword().equals(password)) {
-                return true;
-            }
+            return user.getPassword().equals(password);
         }
-        return false;
 
     }
 
