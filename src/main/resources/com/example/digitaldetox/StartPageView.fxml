@@ -7,24 +7,28 @@
 <?import javafx.scene.control.Button?>
 
 
-
-<VBox alignment="TOP_CENTER" spacing="40" xmlns:fx="http://javafx.com/fxml"
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<VBox alignment="TOP_CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.digitaldetox.controller.StartPageController">
     <padding>
         <Insets top="40"/>
     </padding>
-
-    <Label alignment="CENTER"
-           text = "Welcome to Digital Detox!"
-           wrapText="true"/>
-
+    <VBox alignment="TOP_CENTER">
+        <Text>
+            <text>Welcome to</text>
+        </Text>
+        <Text style="-fx-font-size: 40px;">
+            <text>DIGITAL DETOX</text>
+        </Text>
+    </VBox>
     <VBox alignment="CENTER" spacing="20">
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="loginButton" text="Log in" onAction="#onLoginButtonClick" style="-fx-text-fill: white;-fx-background-color: green; -fx-border-color: #006400; -fx-border-width: 1px; -fx-border-radius: 5px;"/>
+            <Button fx:id="signUpButton" text="Sign up" onAction="#onSignUpButtonClick"/>
+        </HBox>
 
-        <Button fx:id="loginButton" text="Log in" onAction="#onLoginButtonClick"/>
-
-        <Button fx:id="signUpButton" text="Sign up" onAction="#onSignUpButtonClick"/>
-
-        <Button fx:id="quitButton" text="Quit" onAction="#onQuitButtonClick"/>
+        <Button fx:id="quitButton" text="Quit" prefWidth="125" onAction="#onQuitButtonClick" style="-fx-text-fill: white;-fx-background-color: red; -fx-border-color: #8B0000; -fx-border-width: 1px; -fx-border-radius: 5px;"/>
 
     </VBox>
 

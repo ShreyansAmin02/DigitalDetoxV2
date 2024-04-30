@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ebf0c108-70bb-4694-8e17-ac7c79e41625" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/model/UserAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/model/UserAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/LoginPageView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/LoginPageView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/MainPageView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/MainPageView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/StartPageView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/StartPageView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "EditUI",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
@@ -61,6 +62,15 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\shrey\OneDrive\Documents\Uni\Year 2\Semester 02\Software Dev\Assignment\Digital Detox V2\Digital-Detox\src\main\java\com\example\digitaldetox" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HelloApplication" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.digitaldetox.HelloApplication" />
+      <module name="Digital-Detox" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

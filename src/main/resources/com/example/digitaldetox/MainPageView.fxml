@@ -9,7 +9,7 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.digitaldetox.controller.MainPageController"
             prefHeight="400.0" prefWidth="600.0">
-
-    <Button fx:id="logoutButton" text="Logout" onAction="#onLogoutButtonClick"/>
-
+    <VBox alignment="CENTER" spacing="20">
+        <Button fx:id="logoutButton" text="Logout" onAction="#onLogoutButtonClick" style="-fx-text-fill: white;-fx-background-color: red; -fx-border-color: #8B0000; -fx-border-width: 1px; -fx-border-radius: 5px;"/>
+    </VBox>
 </AnchorPane>
