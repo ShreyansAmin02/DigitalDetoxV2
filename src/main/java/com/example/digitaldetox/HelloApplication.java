@@ -8,11 +8,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+    // Constants defining the window title and size
+    public static final String TITLE = "Digital Detox";
+    public static final int WIDTH = 600;
+    public static final int HEIGHT = 300;
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("StartPageView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), WIDTH, HEIGHT);
+        stage.setTitle(TITLE);
         stage.setScene(scene);
         stage.show();
     }

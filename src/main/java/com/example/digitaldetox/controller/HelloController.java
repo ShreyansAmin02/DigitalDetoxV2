@@ -1,4 +1,4 @@
-package com.example.digitaldetox;
+package com.example.digitaldetox.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

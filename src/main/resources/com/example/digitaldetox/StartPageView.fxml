@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+
+
+
+<VBox alignment="TOP_CENTER" spacing="40" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.digitaldetox.controller.StartPageController">
+    <padding>
+        <Insets top="40"/>
+    </padding>
+
+    <Label alignment="CENTER"
+           text = "Welcome to Digital Detox!"
+           wrapText="true"/>
+
+    <VBox alignment="CENTER" spacing="20">
+
+        <Button fx:id="loginButton" text="Log in" onAction="#onLoginButtonClick"/>
+
+        <Button fx:id="signUpButton" text="Sign up" onAction="#onSignUpButtonClick"/>
+
+        <Button fx:id="quitButton" text="Quit" onAction="#onQuitButtonClick"/>
+
+    </VBox>
+
+</VBox>
+
