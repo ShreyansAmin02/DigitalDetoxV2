@@ -16,11 +16,6 @@ public class StartPageController {
     private Button signUpButton;
     @FXML
     private Button quitButton;
-
-
-
-
-
     @FXML
     protected void onLoginButtonClick() throws IOException {
         Stage stage = (Stage) loginButton.getScene().getWindow();
@@ -28,7 +23,6 @@ public class StartPageController {
         Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setScene(scene);
     }
-
     @FXML
     protected void onSignUpButtonClick() throws IOException {
         Stage stage = (Stage) signUpButton.getScene().getWindow();
@@ -36,7 +30,6 @@ public class StartPageController {
         Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setScene(scene);
     }
-
     @FXML
     protected void onQuitButtonClick() throws IOException {
         Stage stage = (Stage) quitButton.getScene().getWindow();
