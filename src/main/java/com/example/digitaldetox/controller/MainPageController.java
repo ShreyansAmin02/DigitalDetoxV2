@@ -24,8 +24,6 @@ import java.util.List;
 
 public class MainPageController {
     @FXML
-    public ImageView homeImage;
-    @FXML
     private Button logoutButton;
     @FXML
     private Button loginToAccountButton;
@@ -52,7 +50,6 @@ public class MainPageController {
         userDAO = new UserAccountDAO();
         userAuthentication = new UserAuthentication(userDAO) ;
     }
-
     private void loginStatus() {
 
     }
