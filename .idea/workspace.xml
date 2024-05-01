@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebf0c108-70bb-4694-8e17-ac7c79e41625" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/mavenProjectSettings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/UserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/MainPageView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/MainPageView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/StartPageView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/StartPageView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +50,9 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.UserTest (1).executor": "Run",
+    "JUnit.UserTest.executor": "Run",
+    "JUnit.main.test.java in Digital-Detox.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -61,11 +64,14 @@
     "last_opened_file_path": "C:/Users/shrey/AppData/Local/SceneBuilder/SceneBuilder.exe",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.40344828"
+    "project.structure.side.proportion": "0.40344828",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.testRunning"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\shrey\OneDrive\Documents\Uni\Year 2\Semester 02\Software Dev\Assignment\Digital Detox V2\Digital-Detox\src\main" />
+      <recent name="C:\Users\shrey\OneDrive\Documents\Uni\Year 2\Semester 02\Software Dev\Assignment\Digital Detox V2\Digital-Detox\src" />
       <recent name="C:\Users\shrey\OneDrive\Documents\Uni\Year 2\Semester 02\Software Dev\Assignment\Digital Detox V2\Digital-Detox\src\main\java\com\example\digitaldetox" />
     </key>
   </component>
@@ -77,6 +83,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Digital-Detox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main.test" />
+      <option name="MAIN_CLASS_NAME" value="main.test.UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Digital-Detox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.test.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main.test.java" />
+      <option name="MAIN_CLASS_NAME" value="main.test.java.UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main.test.java in Digital-Detox" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Digital-Detox" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.test.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="main.test.java" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.HelloApplication" />
+      <item itemvalue="JUnit.UserTest" />
+      <item itemvalue="JUnit.UserTest (1)" />
+      <item itemvalue="JUnit.main.test.java in Digital-Detox" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserTest (1)" />
+        <item itemvalue="JUnit.main.test.java in Digital-Detox" />
+        <item itemvalue="JUnit.UserTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -95,5 +158,15 @@
       <updated>1714443053515</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalAccessError" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
