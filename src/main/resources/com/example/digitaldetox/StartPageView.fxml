@@ -12,11 +12,12 @@
         <Insets top="40" />
     </padding>
     <VBox alignment="TOP_CENTER">
-        <Text fill="#0eb02f" stroke="#2a7e3b" strokeLineCap="ROUND" strokeLineJoin="ROUND" style="-fx-font-size: 40px;" textAlignment="CENTER">
-            <text>UNPLUGIFY</text>
-         <font>
-            <Font name="Gill Sans MT Bold" size="40.0" />
-         </font>
+        <Text fill="#0eb02f" stroke="#2a7e3b" strokeLineCap="ROUND" strokeLineJoin="ROUND" style="-fx-font-size: 40px;"
+              textAlignment="CENTER">
+            <font>
+                <Font name="Gill Sans MT Bold" size="40.0"/>
+            </font>
+            UNPLUGIFY
         </Text>
     </VBox>
     <VBox alignment="CENTER" spacing="20">

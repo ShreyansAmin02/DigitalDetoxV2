@@ -23,6 +23,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainPageController {
+    public Button settingsBtn;
+    public Button goalsBtn;
+    public Button scheduleBtn;
+    public Button timerBtn;
+    public Button statsBtn;
+    public Button profileBtn;
+    public Button homeBtn;
     @FXML
     private Button logoutButton;
     @FXML
