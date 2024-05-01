@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     // Constants defining the window title and size
-    public static final String TITLE = "Digital Detox";
+    public static final String TITLE = "Unplugify";
     public static final int WIDTH = 600;
     public static final int HEIGHT = 300;
 
