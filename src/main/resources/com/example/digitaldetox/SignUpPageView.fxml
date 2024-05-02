@@ -36,7 +36,7 @@
     <TextField fx:id="usernameTextField" maxWidth="150" GridPane.columnIndex="2" GridPane.rowIndex="1" />
     <PasswordField fx:id="passwordTextField" maxWidth="150" GridPane.columnIndex="2" GridPane.rowIndex="2" />
     <PasswordField fx:id="confirmPasswordTextField" maxWidth="150" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-    <Label fx:id="signupstatus" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" style="-fx-text-fill: #ff0000" maxWidth="150"/>
+    <Label fx:id="signupstatus" maxWidth="150" prefHeight="18.0" prefWidth="101.0" style="-fx-text-fill: #ff0000" wrapText="true" GridPane.rowIndex="4" />
     <HBox alignment="CENTER" spacing="20" />
 
       
