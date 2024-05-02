@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebf0c108-70bb-4694-8e17-ac7c79e41625" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/MainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/SignUpPageView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/SignUpPageView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/testDatabase.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -61,7 +63,7 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/shrey/AppData/Local/SceneBuilder/SceneBuilder.exe",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.40344828",
     "settings.editor.selected.configurable": "reference.settings.project.maven.testRunning"
@@ -73,8 +75,11 @@
       <recent name="C:\Users\shrey\OneDrive\Documents\Uni\Year 2\Semester 02\Software Dev\Assignment\Digital Detox V2\Digital-Detox\src" />
       <recent name="C:\Users\shrey\OneDrive\Documents\Uni\Year 2\Semester 02\Software Dev\Assignment\Digital Detox V2\Digital-Detox\src\main\java\com\example\digitaldetox" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.digitaldetox.HelloApplication" />
       <module name="Digital-Detox" />
@@ -164,6 +169,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.IllegalAccessError" package="java.lang" />
           <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="3" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
