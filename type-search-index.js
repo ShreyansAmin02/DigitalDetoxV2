@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.example.digitaldetox","l":"HelloApplication"},{"p":"com.example.digitaldetox.controller","l":"HelloController"},{"p":"com.example.digitaldetox.controller","l":"MainPageController"},{"p":"com.example.digitaldetox.controller","l":"StartPageController"}];updateSearchResults();
