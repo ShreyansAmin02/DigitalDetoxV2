@@ -3,7 +3,6 @@ module com.example.digitaldetox {
     requires javafx.fxml;
     requires java.sql;
     requires java.desktop;
-    requires org.junit.jupiter.api;
 
 
     opens com.example.digitaldetox to javafx.fxml;
