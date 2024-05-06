@@ -2,7 +2,6 @@ import com.example.digitaldetox.model.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 public class UserTest {
     private User user;
     @BeforeEach
