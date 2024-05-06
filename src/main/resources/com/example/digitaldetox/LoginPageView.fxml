@@ -31,7 +31,7 @@
             </font></Label>
             <PasswordField fx:id="passwordTextField" maxWidth="150" GridPane.columnIndex="1" GridPane.rowIndex="1" />
         </HBox>
-    <Label fx:id="loginstatus" maxWidth="150" style="-fx-text-fill: #ff0000" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label fx:id="loginStatus" maxWidth="150" style="-fx-text-fill: #ff0000" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
         <HBox alignment="CENTER" spacing="20">
             <Button fx:id="loginToAccountButton" onAction="#onLoginToAccountClick" style="-fx-text-fill: white; -fx-background-color: green; -fx-border-color: #006400; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Log in" GridPane.columnIndex="1" GridPane.rowIndex="3">
             <font>
