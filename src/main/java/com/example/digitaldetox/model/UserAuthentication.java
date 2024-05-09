@@ -1,15 +1,12 @@
 package com.example.digitaldetox.model;
-
 public class UserAuthentication {
     private final IUserDAO userAccountDAO;
     public UserAuthentication(IUserDAO userAccountDAO) {
         this.userAccountDAO = userAccountDAO;
     }
-
     //signup authentication
     public boolean isUsernameTaken(String username) {
         return userAccountDAO.getUserByUsername(username) != null;
-
     }
 
     //need to redo lol
@@ -54,7 +51,6 @@ public class UserAuthentication {
         return password.equals(confirmPassword);
     }
 
-
     //login authentication
 
     public boolean doesPasswordMatchUsername(String username, String password) {
@@ -68,8 +64,4 @@ public class UserAuthentication {
         }
 
     }
-
-
-
-
 }
