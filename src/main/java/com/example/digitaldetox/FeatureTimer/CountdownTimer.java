@@ -1,16 +1,94 @@
 package com.example.digitaldetox.FeatureTimer;
 
-import javafx.application.Application;
+
 import javafx.stage.Stage;
+import javafx.application.Platform;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class CountdownTimer extends Application {
+public class CountdownTimer extends BorderPane {
+    private Label countdownLabel;
+    private Button overrideButton;
+    private Timer timer;
+    private int timeLeft; // time left in seconds
+    private long lockoutDuration; // lockout duration in milliseconds
+    private int iterations;
 
-    public static void main(String[] args) {
-        launch(args);
+    public CountdownTimer(int totalTime, long lockoutDuration, int iterations) {
+        this.timeLeft = totalTime;
+        this.lockoutDuration = lockoutDuration;
+        this.iterations = iterations;
+        initializeComponents();
+        startCountdown();
     }
 
-    @Override
-    public void start(Stage primaryStage) {
+    private void initializeComponents() {
+        countdownLabel = new Label(formatTime(timeLeft));
+        countdownLabel.setStyle("-fx-text-fill: green; -fx-font-size: 16px;");
 
+        overrideButton = new Button("Override Lockout");
+        overrideButton.setStyle("-fx-background-color: white; -fx-border-color: #8B0000; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;");
+        overrideButton.setOnAction(e -> overrideLockout());
+
+        VBox vbox = new VBox(10, countdownLabel, overrideButton);
+        vbox.setStyle("-fx-alignment: center; -fx-padding: 20px;");
+        setCenter(vbox);
+    }
+
+    private void startCountdown() {
+        timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            private int count = 0;
+
+            @Override
+            public void run() {
+                if (timeLeft > 0) {
+                    timeLeft--;
+                    Platform.runLater(() -> countdownLabel.setText("Locked out for: " + formatTime(timeLeft)));
+                } else {
+                    count++;
+                    if (count >= iterations) {
+                        timer.cancel();
+                        Platform.runLater(() -> {
+                            countdownLabel.setText("Time's up!");
+                            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Task completed and timer stopped.");
+                            alert.showAndWait();
+                        });
+                    } else {
+                        timeLeft = (int) (lockoutDuration / 1000);
+                        Platform.runLater(() -> countdownLabel.setText("Locked out for: " + formatTime(timeLeft)));
+                    }
+                }
+            }
+        }, 1000, 1000);
+    }
+
+    private void stopCountdown() {
+        if (timer != null) {
+            timer.cancel();
+            timer = null;
+            Platform.runLater(() -> countdownLabel.setText("Timer stopped"));
+        }
+    }
+
+    private void overrideLockout() {
+        stopCountdown();
+        Platform.runLater(() -> {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Lockout overridden.");
+            alert.showAndWait();
+        });
+        ((Stage) getScene().getWindow()).close(); // Close the window after overriding
+    }
+
+    private String formatTime(int totalSeconds) {
+        int hours = totalSeconds / 3600;
+        int minutes = (totalSeconds % 3600) / 60;
+        int seconds = totalSeconds % 60;
+        return String.format("%02d:%02d:%02d", hours, minutes, seconds);
     }
 }

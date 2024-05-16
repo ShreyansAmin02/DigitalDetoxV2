@@ -18,6 +18,7 @@
       <list>
         <option value="module-info" />
         <option value="Class" />
+        <option value="JavaFXApplication" />
       </list>
     </option>
   </component>
