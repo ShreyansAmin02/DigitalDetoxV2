@@ -8,12 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebf0c108-70bb-4694-8e17-ac7c79e41625" name="Changes" comment="Attempting to fix test file">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_05_2024_2_47_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_05_2024_2_47_pm__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_05_2024_2_47_pm__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_05_2024_2_47_pm__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_05_2024_2_56_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_05_2024_2_56_pm__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_05_2024_2_56_pm__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_05_2024_2_56_pm__Changes_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +31,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/MainPageView.fxml" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -55,9 +49,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
+    "Downloaded.Files.Path.Enabled": "false",
     "JUnit.UserTest (1).executor": "Run",
     "JUnit.UserTest (2).executor": "Run",
+    "JUnit.UserTest-Scott.executor": "Run",
     "JUnit.UserTest.executor": "Run",
     "JUnit.main.test.java in Digital-Detox.executor": "Run",
     "Maven.Digital-Detox [org.apache.maven.plugins:maven-javadoc-plugin:3.4.0:javadoc].executor": "Run",
@@ -73,8 +68,8 @@
     "last_opened_file_path": "C:/Users/shrey/OneDrive/Documents/Uni/Year 2/Semester 02/Software Dev/Week 10/module10",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.40344828",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.testRunning"
+    "project.structure.side.proportion": "0.3349835",
+    "settings.editor.selected.configurable": "terminal"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -93,6 +88,15 @@
     <configuration name="HelloApplication" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.example.digitaldetox.HelloApplication" />
       <module name="Digital-Detox" />
+      <option name="VM_PARAMETERS" value="--module-path $fx$ --add-modules javafx.controls,javafx.fxml " />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.digitaldetox.HelloApplication" />
+      <module name="Digital-Detox" />
+      <option name="VM_PARAMETERS" value="--module-path $fx$ --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -112,16 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Digital-Detox" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest-Scott" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="Digital-Detox" />
       <extension name="coverage">
         <pattern>
@@ -129,8 +124,30 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="main.test.java" />
-      <option name="MAIN_CLASS_NAME" value="main.test.java.UserTest" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--module-path ${$USER_HOME$/Downloads/javafx-sdk-22.0.1} --add-modules=javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Digital-Detox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="--module-path $$USER_HOME$/Downloads/javafx-sdk-22.0.1 --add-modules=javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="Digital-Detox" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,25 +169,25 @@
     </configuration>
     <list>
       <item itemvalue="Application.HelloApplication" />
-      <item itemvalue="JUnit.UserTest (2)" />
       <item itemvalue="JUnit.UserTest" />
+      <item itemvalue="JUnit.UserTest-Scott" />
       <item itemvalue="JUnit.UserTest (1)" />
       <item itemvalue="JUnit.main.test.java in Digital-Detox" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserTest-Scott" />
         <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.main.test.java in Digital-Detox" />
         <item itemvalue="JUnit.UserTest (1)" />
-        <item itemvalue="JUnit.UserTest (2)" />
-        <item itemvalue="JUnit.UserTest (2)" />
+        <item itemvalue="JUnit.UserTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
       </set>
     </attachedChunks>
   </component>
