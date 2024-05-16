@@ -58,7 +58,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="timerBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: white;">
+      <Button fx:id="timerBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: white;" onAction="#handleTimerButtonClick">
          <graphic>
              <ImageView fitHeight="38.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                  <Image url="@image/ClockIcon.png"/>
