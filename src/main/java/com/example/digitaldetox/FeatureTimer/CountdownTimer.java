@@ -1,13 +1,15 @@
 package com.example.digitaldetox.FeatureTimer;
 
-
-import javafx.stage.Stage;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import java.util.Optional;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -54,11 +56,7 @@ public class CountdownTimer extends BorderPane {
                     count++;
                     if (count >= iterations) {
                         timer.cancel();
-                        Platform.runLater(() -> {
-                            countdownLabel.setText("Time's up!");
-                            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Task completed and timer stopped.");
-                            alert.showAndWait();
-                        });
+                        Platform.runLater(() -> showCompletionDialog());
                     } else {
                         timeLeft = (int) (lockoutDuration / 1000);
                         Platform.runLater(() -> countdownLabel.setText("Locked out for: " + formatTime(timeLeft)));
@@ -76,10 +74,35 @@ public class CountdownTimer extends BorderPane {
         }
     }
 
+    private void showCompletionDialog() {
+        Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.setTitle("Timer Alert");
+        alert.setHeaderText("Timer triggered");
+        alert.setContentText("Do you want to continue?");
+
+        ButtonType buttonIgnore = new ButtonType("Ignore");
+        ButtonType buttonLockout = new ButtonType("Lockout");
+
+        alert.getButtonTypes().setAll(buttonIgnore, buttonLockout);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == buttonIgnore){
+            System.out.println("User chose to Ignore.");
+        } else if (result.get() == buttonLockout) {
+            System.out.println("User chose lockout.");
+            startLockout();
+        }
+    }
+
+    private void startLockout() {
+        timeLeft = (int) (lockoutDuration / 1000);
+        startCountdown();
+    }
+
     private void overrideLockout() {
         stopCountdown();
         Platform.runLater(() -> {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION, "Lockout overridden.");
+            Alert alert = new Alert(AlertType.INFORMATION, "Lockout overridden.");
             alert.showAndWait();
         });
         ((Stage) getScene().getWindow()).close(); // Close the window after overriding
@@ -92,4 +115,3 @@ public class CountdownTimer extends BorderPane {
         return String.format("%02d:%02d:%02d", hours, minutes, seconds);
     }
 }
-
