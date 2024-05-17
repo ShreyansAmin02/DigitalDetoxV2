@@ -12,9 +12,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.IOException;
-
 
 public class MainPageController {
     @FXML
@@ -42,11 +42,11 @@ public class MainPageController {
 
     public MainPageController() {
         userDAO = new UserAccountDAO();
-        userAuthentication = new UserAuthentication(userDAO) ;
+        userAuthentication = new UserAuthentication(userDAO);
     }
 
     private void loginStatus() {
-
+        // Implementation for login status
     }
 
     @FXML
@@ -63,46 +63,46 @@ public class MainPageController {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("StartPageView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setScene(scene);
-
     }
+
     @FXML
     protected void onLoginToAccountClick() throws IOException {
         if (usernameTextField.getText().isEmpty() || passwordTextField.getText().isEmpty()) {
             loginStatus.setStyle("-fx-text-fill: #ff0000");
             loginStatus.setText("Please do not leave any fields blank.");
-        }
-        else if (userAuthentication.doesPasswordMatchUsername(usernameTextField.getText(), passwordTextField.getText())) {
-            loginStatus.setStyle("-fx-text-fill: #006633;");
-            loginStatus.setText("Login successful!");
-
-            Stage stage = (Stage) loginToAccountButton.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MainPageView.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
-
-
-            PauseTransition shortPause = new PauseTransition(Duration.seconds(3));
-            shortPause.play();
-            shortPause.setOnFinished(event -> stage.setScene(scene));
-
-
         } else {
-            loginStatus.setStyle("-fx-text-fill: #ff0000");
-            loginStatus.setText("Incorrect username or password.");
+            User user = userDAO.getUserByUsername(usernameTextField.getText());
+            if (user != null && BCrypt.checkpw(passwordTextField.getText(), user.getPassword())) {
+                loginStatus.setStyle("-fx-text-fill: #006633;");
+                loginStatus.setText("Login successful!");
+
+                Stage stage = (Stage) loginToAccountButton.getScene().getWindow();
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MainPageView.fxml"));
+                Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
+
+                PauseTransition shortPause = new PauseTransition(Duration.seconds(3));
+                shortPause.play();
+                shortPause.setOnFinished(event -> stage.setScene(scene));
+            } else {
+                loginStatus.setStyle("-fx-text-fill: #ff0000");
+                loginStatus.setText("Incorrect username or password.");
+            }
         }
-
-
     }
 
     @FXML
     protected void onSignUpToAccountClick() throws IOException {
-        User user = new User(usernameTextField.getText(), passwordTextField.getText(), emailTextField.getText());
+        String plainPassword = passwordTextField.getText();
+        String hashedPassword = BCrypt.hashpw(plainPassword, BCrypt.gensalt());
+
+        User user = new User(usernameTextField.getText(), hashedPassword, emailTextField.getText());
+
         if (usernameTextField.getText().isEmpty() || passwordTextField.getText().isEmpty() || emailTextField.getText().isEmpty()) {
+            signupStatus.setStyle("-fx-text-fill: #ff0000;");
             signupStatus.setText("Please do not leave any fields blank.");
-        }
-        else if (userAuthentication.isPasswordValid(user.getPassword()) && userAuthentication.isEmailValid(user.getEmail())
+        } else if (userAuthentication.isPasswordValid(plainPassword) && userAuthentication.isEmailValid(user.getEmail())
                 && !userAuthentication.isUsernameTaken(user.getUsername())
-                && userAuthentication.doesPasswordMatchConfirmPassword(user.getPassword(), confirmPasswordTextField.getText()))
-        {
+                && userAuthentication.doesPasswordMatchConfirmPassword(plainPassword, confirmPasswordTextField.getText())) {
             Stage stage = (Stage) signUpToAccountButton.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MainPageView.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
@@ -113,28 +113,18 @@ public class MainPageController {
             PauseTransition shortPause = new PauseTransition(Duration.seconds(3));
             shortPause.play();
             shortPause.setOnFinished(event -> stage.setScene(scene));
-
-        }
-
-        else if (userAuthentication.isUsernameTaken(user.getUsername())){
-            signupStatus.setStyle("-fx-text-fill: #ff0000");
+        } else if (userAuthentication.isUsernameTaken(user.getUsername())) {
+            signupStatus.setStyle("-fx-text-fill: #ff0000;");
             signupStatus.setText("Username has already been taken.");
-        }
-
-        else if (!userAuthentication.isEmailValid(user.getEmail())) {
-            signupStatus.setStyle("-fx-text-fill: #ff0000");
+        } else if (!userAuthentication.isEmailValid(user.getEmail())) {
+            signupStatus.setStyle("-fx-text-fill: #ff0000;");
             signupStatus.setText("Please enter a valid email.");
-        }
-
-        else if (!userAuthentication.isPasswordValid(user.getPassword())) {
-            signupStatus.setStyle("-fx-text-fill: #ff0000");
+        } else if (!userAuthentication.isPasswordValid(plainPassword)) {
+            signupStatus.setStyle("-fx-text-fill: #ff0000;");
             signupStatus.setText("Password does not meet minimum requirements.");
-        } else if (!userAuthentication.doesPasswordMatchConfirmPassword(user.getPassword(), confirmPasswordTextField.getText())) {
-            signupStatus.setStyle("-fx-text-fill: #ff0000");
+        } else if (!userAuthentication.doesPasswordMatchConfirmPassword(plainPassword, confirmPasswordTextField.getText())) {
+            signupStatus.setStyle("-fx-text-fill: #ff0000;");
             signupStatus.setText("Passwords do not match.");
         }
-
     }
-
-
 }

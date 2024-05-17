@@ -4,7 +4,7 @@ module com.example.digitaldetox {
     requires java.sql;
     requires java.desktop;
     requires org.junit.jupiter;
-
+    requires jbcrypt;
 
     opens com.example.digitaldetox to javafx.fxml;
     exports com.example.digitaldetox;
