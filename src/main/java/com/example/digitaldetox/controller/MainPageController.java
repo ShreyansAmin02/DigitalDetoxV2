@@ -9,6 +9,7 @@ import com.example.digitaldetox.model.UserAuthentication;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -43,6 +44,8 @@ public class MainPageController {
     private Label loginStatus;
     private IUserDAO userDAO;
     private UserAuthentication userAuthentication;
+    @FXML
+    private Button goalsButton;
 
     public MainPageController() {
         userDAO = new UserAccountDAO();
@@ -131,17 +134,19 @@ public class MainPageController {
             signupStatus.setText("Passwords do not match.");
         }
     }
-    @FXML
-    private void handleGoalsButtonClick(ActionEvent event) {
-        System.out.println("Goals button clicked!");
-
-        // Ensure JavaFX thread can interact with the Swing thread
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                new AppFrame();  // This will create and show the AppFrame
-            }
-        });
-    }
+//    @FXML
+//    private void handleGoalsButtonClick(ActionEvent event) {
+//        try {
+//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/digitaldetox/ToDoListView.fxml"));
+//            Parent root = loader.load();
+//            Stage stage = new Stage();
+//            stage.setTitle("To-Do List");
+//            stage.setScene(new Scene(root));
+//            stage.show();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
     @FXML
     private void handleTimerButtonClick() {
         StartUpFrame startUpFrame = new StartUpFrame();
@@ -150,4 +155,18 @@ public class MainPageController {
         stage.setTitle("Timer Setup");
         stage.show();
     }
+    @FXML
+    public void handleGoalsButtonClick(javafx.event.ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/digitaldetox/GoalListView.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("To-Do List");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
+

@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebf0c108-70bb-4694-8e17-ac7c79e41625" name="Changes" comment="Alex PasswordHash">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/IScreenTimeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/ScreenTimeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/app_tracker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/screentime_tracker.java" afterDir="false" />
+    <list default="true" id="ebf0c108-70bb-4694-8e17-ac7c79e41625" name="Changes" comment="Updated Screentime_tracker&#10;Updated Password Hashing &#10;Updated Timer and lockout scheduling &#10;&#10;missing goals function to button. Goals function works on it's own but not in main">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/GoalListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/GoalListView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/MainPageView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/MainPageView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,10 +29,13 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="EditUI" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -67,7 +66,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.40344828",
-    "settings.editor.selected.configurable": "preferences.pathVariables"
+    "settings.editor.selected.configurable": "preferences.externalResources"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -75,6 +74,8 @@
       <recent name="A:\DigitalDetoxV2_FINALFINAL\src\main\java\com\example\digitaldetox" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="A:\DigitalDetoxV2_FINALFINAL\target\classes\com\example\digitaldetox" />
+      <recent name="A:\DigitalDetoxV2_FINALFINAL\src\main\java\com\example\digitaldetox" />
       <recent name="C:\Users\shrey\OneDrive\Documents\Uni\Year 2\Semester 02\Software Dev\Assignment\Digital Detox V2\Digital-Detox\src\main" />
       <recent name="C:\Users\shrey\OneDrive\Documents\Uni\Year 2\Semester 02\Software Dev\Assignment\Digital Detox V2\Digital-Detox\src" />
       <recent name="C:\Users\shrey\OneDrive\Documents\Uni\Year 2\Semester 02\Software Dev\Assignment\Digital Detox V2\Digital-Detox\src\main\java\com\example\digitaldetox" />
@@ -155,9 +156,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.main.test.java in Digital-Detox" />
+        <item itemvalue="JUnit.UserTest (1)" />
+        <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.UserTest (1)" />
         <item itemvalue="JUnit.main.test.java in Digital-Detox" />
-        <item itemvalue="JUnit.UserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,12 +188,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716122025613</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated Screentime_tracker&#10;Updated Password Hashing &#10;Updated Timer and lockout scheduling &#10;&#10;missing goals function to button. Goals function works on it's own but not in main">
+      <option name="closed" value="true" />
+      <created>1716126190039</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716126190039</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Alex PasswordHash" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alex PasswordHash" />
+    <MESSAGE value="Updated Screentime_tracker&#10;Updated Password Hashing &#10;Updated Timer and lockout scheduling &#10;&#10;missing goals function to button. Goals function works on it's own but not in main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Screentime_tracker&#10;Updated Password Hashing &#10;Updated Timer and lockout scheduling &#10;&#10;missing goals function to button. Goals function works on it's own but not in main" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
