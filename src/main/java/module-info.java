@@ -3,8 +3,10 @@ module com.example.digitaldetox {
     requires javafx.fxml;
     requires java.sql;
     requires java.desktop;
-    requires jbcrypt;
     //requires org.junit.jupiter;
+    requires com.sun.jna;
+    requires com.sun.jna.platform;
+    requires jbcrypt;
 
 
     opens com.example.digitaldetox to javafx.fxml;

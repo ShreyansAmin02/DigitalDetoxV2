@@ -14,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.mindrot.jbcrypt.BCrypt;
+import com.example.digitaldetox.FeatureTimer.StartUpFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -140,5 +141,13 @@ public class MainPageController {
                 new AppFrame();  // This will create and show the AppFrame
             }
         });
+    }
+    @FXML
+    private void handleTimerButtonClick() {
+        StartUpFrame startUpFrame = new StartUpFrame();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(startUpFrame, 400, 400)); // You can adjust size as needed
+        stage.setTitle("Timer Setup");
+        stage.show();
     }
 }

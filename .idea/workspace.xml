@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebf0c108-70bb-4694-8e17-ac7c79e41625" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/GoalSettingClasses/AppFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/GoalSettingClasses/ButtonPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/GoalSettingClasses/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/GoalSettingClasses/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/GoalSettingClasses/TitleBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/GoalSettingClasses/ToDoList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_05_2024_1_29_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_1_05_2024_1_29_pm__Changes_.xml" afterDir="false" />
+    <list default="true" id="ebf0c108-70bb-4694-8e17-ac7c79e41625" name="Changes" comment="Alex PasswordHash">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/IScreenTimeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/ScreenTimeDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/app_tracker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/tracker/screentime_tracker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/MainPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testDatabase.db" beforeDir="false" afterPath="$PROJECT_DIR$/testDatabase.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "A:/DigitalDetoxV2_FINALFINAL",
+    "last_opened_file_path": "A:/DigitalDetoxV2_FINALFINAL/src/main/java/com/example/digitaldetox",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.40344828",
@@ -85,7 +84,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HelloApplication">
     <configuration name="HelloApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -178,7 +177,20 @@
       <option name="presentableId" value="Default" />
       <updated>1714443053515</updated>
     </task>
+    <task id="LOCAL-00001" summary="Alex PasswordHash">
+      <option name="closed" value="true" />
+      <created>1716122025613</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716122025613</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Alex PasswordHash" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alex PasswordHash" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
