@@ -4,6 +4,8 @@ module com.example.digitaldetox {
     requires java.sql;
     requires java.desktop;
     requires org.junit.jupiter;
+    requires com.sun.jna;
+    requires com.sun.jna.platform;
 
 
     opens com.example.digitaldetox to javafx.fxml;
