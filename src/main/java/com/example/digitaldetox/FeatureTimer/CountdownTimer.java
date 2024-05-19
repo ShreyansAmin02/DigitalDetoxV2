@@ -21,6 +21,8 @@ public class CountdownTimer extends BorderPane {
     private long lockoutDuration; // lockout duration in milliseconds
     private int iterations;
 
+    private int ignoresCount = 0; //
+
     public CountdownTimer(int totalTime, long lockoutDuration, int iterations) {
         this.timeLeft = totalTime;
         this.lockoutDuration = lockoutDuration;
@@ -51,7 +53,7 @@ public class CountdownTimer extends BorderPane {
             public void run() {
                 if (timeLeft > 0) {
                     timeLeft--;
-                    Platform.runLater(() -> countdownLabel.setText("Locked out for: " + formatTime(timeLeft)));
+                    Platform.runLater(() -> countdownLabel.setText("Time Left: " + formatTime(timeLeft)));
                 } else {
                     count++;
                     if (count >= iterations) {
@@ -59,7 +61,7 @@ public class CountdownTimer extends BorderPane {
                         Platform.runLater(() -> showCompletionDialog());
                     } else {
                         timeLeft = (int) (lockoutDuration / 1000);
-                        Platform.runLater(() -> countdownLabel.setText("Locked out for: " + formatTime(timeLeft)));
+                        Platform.runLater(() -> countdownLabel.setText("Time Left: " + formatTime(timeLeft)));
                     }
                 }
             }
@@ -86,8 +88,10 @@ public class CountdownTimer extends BorderPane {
         alert.getButtonTypes().setAll(buttonIgnore, buttonLockout);
 
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.get() == buttonIgnore){
+        if (result.get() == buttonIgnore) {
             System.out.println("User chose to Ignore.");
+            ignoresCount++;
+
         } else if (result.get() == buttonLockout) {
             System.out.println("User chose lockout.");
             startLockout();
@@ -95,7 +99,11 @@ public class CountdownTimer extends BorderPane {
     }
 
     private void startLockout() {
-        timeLeft = (int) (lockoutDuration / 1000);
+        int Lockout = (int) (lockoutDuration / 1000);
+        Platform.runLater(() -> {
+            countdownLabel.setText("Locked out for: " + formatTime(Lockout));
+            overrideButton.setVisible(true);
+        });
         startCountdown();
     }
 

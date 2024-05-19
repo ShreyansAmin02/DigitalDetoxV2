@@ -1,4 +1,3 @@
-
 package com.example.digitaldetox.FeatureTimer;
 
 import com.example.digitaldetox.FeatureTimer.StartUpFrame;
