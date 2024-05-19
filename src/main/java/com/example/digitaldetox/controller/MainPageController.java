@@ -1,5 +1,5 @@
 package com.example.digitaldetox.controller;
-
+import com.example.digitaldetox.FeatureTimer.StartUpFrame;
 import com.example.digitaldetox.HelloApplication;
 import com.example.digitaldetox.model.IUserDAO;
 import com.example.digitaldetox.model.User;
@@ -133,8 +133,16 @@ public class MainPageController {
             signupStatus.setStyle("-fx-text-fill: #ff0000");
             signupStatus.setText("Passwords do not match.");
         }
-
     }
+    @FXML
+    private void handleTimerButtonClick() {
+        StartUpFrame startUpFrame = new StartUpFrame();
+        Stage stage = new Stage();
+        stage.setScene(new Scene(startUpFrame, 400, 400)); // You can adjust size as needed
+        stage.setTitle("Timer Setup");
+        stage.show();
+    }
+
 
 
 }
