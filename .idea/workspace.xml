@@ -33,12 +33,8 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -68,10 +64,10 @@
     "git-widget-placeholder": "integration",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/shrey/OneDrive/Documents/Uni/Year 2/Semester 02/Software Dev/Week 10/module10",
-    "project.structure.last.edited": "Problems",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.40344828",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.testRunning"
+    "settings.editor.selected.configurable": "Template Data Languages"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -156,11 +152,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.main.test.java in Digital-Detox" />
+        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.UserTest (2)" />
         <item itemvalue="JUnit.UserTest (1)" />
-        <item itemvalue="JUnit.UserTest (2)" />
-        <item itemvalue="JUnit.UserTest (2)" />
+        <item itemvalue="JUnit.UserTest" />
       </list>
     </recent_temporary>
   </component>
