@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebf0c108-70bb-4694-8e17-ac7c79e41625" name="Changes" comment="Updated Screentime_tracker&#10;Updated Password Hashing &#10;Updated Timer and lockout scheduling &#10;&#10;missing goals function to button. Goals function works on it's own but not in main">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/GoalListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/GoalListView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/digitaldetox/controller/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/MainPageView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/digitaldetox/MainPageView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="ebf0c108-70bb-4694-8e17-ac7c79e41625" name="Changes" comment="Updated Screentime_tracker&#10;Updated Password Hashing &#10;Updated Timer and lockout scheduling &#10;&#10;missing goals function to button. Goals function works on it's own but not in main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,10 +52,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "integration",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "A:/DigitalDetoxV2_FINALFINAL/src/main/java/com/example/digitaldetox",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.40344828",
     "settings.editor.selected.configurable": "preferences.externalResources"
