@@ -1,0 +1,48 @@
+Index: src/main/java/FeatureTimer/CountdownTimer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/FeatureTimer/CountdownTimer.java b/src/main/java/com/example/digitaldetox/FeatureTimer/CountdownTimer.java
+rename from src/main/java/FeatureTimer/CountdownTimer.java
+rename to src/main/java/com/example/digitaldetox/FeatureTimer/CountdownTimer.java
+--- a/src/main/java/FeatureTimer/CountdownTimer.java	
++++ b/src/main/java/com/example/digitaldetox/FeatureTimer/CountdownTimer.java	
+@@ -1,4 +1,4 @@
+-package FeatureTimer;
++package com.example.digitaldetox.FeatureTimer;
+ 
+ import javafx.application.Platform;
+ import javafx.scene.control.Alert;
+Index: src/main/java/FeatureTimer/StartUpFrame.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/FeatureTimer/StartUpFrame.java b/src/main/java/com/example/digitaldetox/FeatureTimer/StartUpFrame.java
+rename from src/main/java/FeatureTimer/StartUpFrame.java
+rename to src/main/java/com/example/digitaldetox/FeatureTimer/StartUpFrame.java
+--- a/src/main/java/FeatureTimer/StartUpFrame.java	
++++ b/src/main/java/com/example/digitaldetox/FeatureTimer/StartUpFrame.java	
+@@ -1,4 +1,4 @@
+-package FeatureTimer;
++package com.example.digitaldetox.FeatureTimer;
+ 
+ import javafx.geometry.Insets;
+ import javafx.scene.Scene;
+Index: src/main/java/FeatureTimer/TimerApp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/FeatureTimer/TimerApp.java b/src/main/java/com/example/digitaldetox/FeatureTimer/TimerApp.java
+rename from src/main/java/FeatureTimer/TimerApp.java
+rename to src/main/java/com/example/digitaldetox/FeatureTimer/TimerApp.java
+--- a/src/main/java/FeatureTimer/TimerApp.java	
++++ b/src/main/java/com/example/digitaldetox/FeatureTimer/TimerApp.java	
+@@ -1,4 +1,4 @@
+-package FeatureTimer;
++package com.example.digitaldetox.FeatureTimer;
+ 
+ import javafx.application.Application;
+ import javafx.scene.Scene;
