@@ -59,9 +59,9 @@ public class ScreentimeController implements Initializable {
         CategoryAxis xAxis = new CategoryAxis();
         NumberAxis yAxis = new NumberAxis();
         barChart = new BarChart<>(xAxis, yAxis);
-        barChart.setTitle("Data from SQL Database");
-        xAxis.setLabel("Category");
-        yAxis.setLabel("Value");
+        barChart.setTitle("Screen-time Tracker");
+        xAxis.setLabel("App Name");
+        yAxis.setLabel("Time Spent (Milliseconds)");
 
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         barChart.getData().add(series);
