@@ -8,6 +8,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.CheckBoxListCell;
 import javafx.util.Callback;
+import javafx.util.StringConverter;
 
 public class GoalListController {
     @FXML
@@ -20,7 +21,16 @@ public class GoalListController {
     @FXML
     private void initialize() {
         taskListView.setItems(tasks);
-        taskListView.setCellFactory(CheckBoxListCell.forListView(Task::completedProperty));
+        taskListView.setCellFactory(CheckBoxListCell.forListView(Task::completedProperty, new StringConverter<Task>() {
+            @Override
+            public String toString (Task task){
+                return task.getName();
+            }
+            @Override
+            public Task fromString (String string){
+                return null;
+            }
+        }));
     }
 
     @FXML

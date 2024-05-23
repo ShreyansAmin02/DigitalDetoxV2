@@ -2,6 +2,7 @@ package com.example.digitaldetox.tracker;
 
 public class screentime_tracker {
     //https://stackoverflow.com/questions/10820033/make-a-simple-timer-in-java
+    boolean isTrackerStarted;
     long startTime;
     long totalTime;
     long sessionTime;
@@ -11,12 +12,29 @@ public class screentime_tracker {
         // not reset to 0 when initialised.
         totalTime = 0;
         sessionTime = 0;
+        isTrackerStarted = false;
+    }
+
+    public void reset() {
+        if (isTrackerStarted) {
+            stopTracker();
+        }
+        totalTime = 0;
+        sessionTime = 0;
+        startTracker();
+    }
+
+    public long getTotalTime() {
+        stopTracker();
+        startTracker();
+        return totalTime;
     }
 
     public void startTracker() {
         if (startTime == 0) {
             startTime = System.currentTimeMillis();
         }
+        isTrackerStarted = true;
         sessionTime = 0;
     }
     public void stopTracker() {
@@ -24,6 +42,7 @@ public class screentime_tracker {
         sessionTime = stopTime - startTime;
         totalTime += sessionTime;
         startTime = 0;
+        isTrackerStarted = false;
     }
     public String getTime() {
         long elapsedSeconds = totalTime / 1000;
@@ -34,21 +53,6 @@ public class screentime_tracker {
         long hoursDisplay = elapsedHours % 60;
 
         return (String.format("%02d:%02d:%02d", hoursDisplay, minutesDisplay, secondsDisplay));
-    }
-
-    public static void main(String[] args) {
-        screentime_tracker tracker = new screentime_tracker();
-        tracker.startTracker();
-        try {
-            Thread.sleep(5000); // Simulate 5 seconds of usage
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        tracker.stopTracker();
-
-
-        System.out.println("Total Usage Time (Formatted): " + tracker.getTime());
-        System.out.println("Session Usage Time (Formatted): " + tracker.getTime());
     }
 
 }

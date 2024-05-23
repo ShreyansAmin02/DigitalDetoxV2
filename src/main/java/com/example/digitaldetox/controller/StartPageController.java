@@ -2,6 +2,7 @@ package com.example.digitaldetox.controller;
 
 import com.example.digitaldetox.model.*;
 import com.example.digitaldetox.HelloApplication;
+import com.example.digitaldetox.tracker.app_tracker;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" style="-fx-border-color: #FFA500; -fx-border-width: 5px; -fx-border-radius: 5px; -fx-background-radius: 5;" vgap="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.digitaldetox.controller.MainPageController">
+<GridPane alignment="CENTER" hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" style="-fx-border-color: #FFA500; -fx-border-width: 5px; -fx-border-radius: 5px; -fx-background-radius: 5;" vgap="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.digitaldetox.controller.LoginController">
 <padding>
     <Insets bottom="25" left="25" right="25" top="25" />
 </padding>

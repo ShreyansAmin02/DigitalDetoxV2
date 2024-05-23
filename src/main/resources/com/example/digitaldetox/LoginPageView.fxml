@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" hgap="10" maxHeight="300.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" style="-fx-border-color: #FFA500; -fx-border-radius: 5; -fx-border-width: 5; -fx-background-color: white;" vgap="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.digitaldetox.controller.MainPageController">
+<GridPane alignment="CENTER" hgap="10" maxHeight="300.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" style="-fx-border-color: #FFA500; -fx-border-radius: 5; -fx-border-width: 5; -fx-background-color: white;" vgap="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.digitaldetox.controller.LoginController">
     <padding>
         <Insets bottom="25" left="25" right="25" top="25" />
     </padding>

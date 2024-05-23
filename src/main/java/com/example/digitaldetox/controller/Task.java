@@ -6,22 +6,22 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Task {
-    // private final StringProperty name = new SimpleStringProperty();
-    private final BooleanProperty completed = new SimpleBooleanProperty();
-    private String name;
+    private final StringProperty name;
+    private final BooleanProperty completed;
 
     public Task(String name) {
-        this.name = name;
-        this.completed.set(false);
+        this.name = new SimpleStringProperty(name);
+        this.completed = new SimpleBooleanProperty(false);
     }
 
-//    public String getName() {
-//        return name.get();
-//    }
+    public String getName() {
+        return name.get();  }
 
-//    public StringProperty nameProperty() {
-//        return name;
-//    }
+    public void setName(String name) {
+        this.name.set(name);
+    }
+
+   public StringProperty nameProperty() {     return name; }
 
     public boolean isCompleted() {
         return completed.get();
