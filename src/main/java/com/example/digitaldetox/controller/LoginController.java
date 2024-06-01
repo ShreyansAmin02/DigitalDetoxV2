@@ -1,10 +1,10 @@
 package com.example.digitaldetox.controller;
 
-import com.example.digitaldetox.GoalSettingClasses.AppFrame;
+
 import com.example.digitaldetox.HelloApplication;
 import com.example.digitaldetox.model.*;
-import com.example.digitaldetox.tracker.ScreenTimeDAO;
-import com.example.digitaldetox.tracker.app_tracker;
+import com.example.digitaldetox.model.Screen_Tracker.ScreenTimeDAO;
+
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,10 +14,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import org.mindrot.jbcrypt.BCrypt;
-import com.example.digitaldetox.FeatureTimer.StartUpFrame;
-
-import javax.swing.*;
-import java.awt.event.ActionEvent;
+import com.example.digitaldetox.model.Timer.StartUpFrame;
 import java.io.IOException;
 
 public class LoginController {
@@ -42,8 +39,6 @@ public class LoginController {
     private IUserDAO userDAO;
     private UserAuthentication userAuthentication;
     private ScreenTimeDAO screenTimeDAO;
-    @FXML
-    private Button goalsButton;
 
     public LoginController() {
         userDAO = new UserAccountDAO();
@@ -54,7 +49,7 @@ public class LoginController {
     @FXML
     protected void onBackButtonClick() throws IOException {
         Stage stage = (Stage) backButton.getScene().getWindow();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("StartPageView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/digitaldetox/view/StartPageView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
         stage.setScene(scene);
     }
@@ -65,20 +60,21 @@ public class LoginController {
             loginStatus.setStyle("-fx-text-fill: #ff0000");
             loginStatus.setText("Please do not leave any fields blank.");
         } else {
+
             User user = userDAO.getUserByUsername(usernameTextField.getText());
+
             if (user != null && BCrypt.checkpw(passwordTextField.getText(), user.getPassword())) {
                 loginStatus.setStyle("-fx-text-fill: #006633;");
                 loginStatus.setText("Login successful!");
                 UserSession.getInstance().setLoggedInUser(user);
 
                 Stage stage = (Stage) loginToAccountButton.getScene().getWindow();
-                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MainPageView.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/digitaldetox/view/MainPageView.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
 
-                PauseTransition shortPause = new PauseTransition(Duration.seconds(3));
+                PauseTransition shortPause = new PauseTransition(Duration.seconds(2));
                 shortPause.play();
                 shortPause.setOnFinished(event -> stage.setScene(scene));
-
             } else {
                 loginStatus.setStyle("-fx-text-fill: #ff0000");
                 loginStatus.setText("Incorrect username or password.");
@@ -99,13 +95,17 @@ public class LoginController {
         } else if (userAuthentication.isPasswordValid(plainPassword) && userAuthentication.isEmailValid(user.getEmail())
                 && !userAuthentication.isUsernameTaken(user.getUsername())
                 && userAuthentication.doesPasswordMatchConfirmPassword(plainPassword, confirmPasswordTextField.getText())) {
+
+            userDAO.addUser(user);
+            screenTimeDAO.addApp(user.getaccountId());
+            UserSession.getInstance().setLoggedInUser(user);
+
             Stage stage = (Stage) signUpToAccountButton.getScene().getWindow();
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("MainPageView.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/digitaldetox/view/MainPageView.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), HelloApplication.WIDTH, HelloApplication.HEIGHT);
             signupStatus.setStyle("-fx-text-fill: #006633;");
             signupStatus.setText("Sign up successful!");
-            userDAO.addUser(user);
-            screenTimeDAO.addApp(user.getaccountId());
+
             PauseTransition shortPause = new PauseTransition(Duration.seconds(3));
             shortPause.play();
             shortPause.setOnFinished(event -> stage.setScene(scene));
@@ -123,48 +123,5 @@ public class LoginController {
             signupStatus.setText("Passwords do not match.");
         }
     }
-    //    @FXML
-//    private void handleGoalsButtonClick(ActionEvent event) {
-//        try {
-//            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/digitaldetox/ToDoListView.fxml"));
-//            Parent root = loader.load();
-//            Stage stage = new Stage();
-//            stage.setTitle("To-Do List");
-//            stage.setScene(new Scene(root));
-//            stage.show();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-    @FXML
-    private void handleTimerButtonClick() {
-        StartUpFrame startUpFrame = new StartUpFrame();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(startUpFrame, 400, 400)); // You can adjust size as needed
-        stage.setTitle("Timer Setup");
-        stage.show();
-    }
-    @FXML
-    public void handleGoalsButtonClick(javafx.event.ActionEvent actionEvent) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/digitaldetox/GoalListView.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setTitle("To-Do List");
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void test() {
-        int userID = UserSession.getInstance().getLoggedInUser().getaccountId();
-        String[] appName = screenTimeDAO.getAppNames(userID);
-        long[] appDuration = screenTimeDAO.getAppDurations(userID);
-        System.out.println(appName);
-        System.out.println(appDuration);
-    }
 
 }
-

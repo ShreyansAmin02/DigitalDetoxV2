@@ -1,4 +1,4 @@
-package com.example.digitaldetox.FeatureTimer;
+package com.example.digitaldetox.model.Timer;
 
 import javafx.geometry.Insets;
 import javafx.scene.Scene;

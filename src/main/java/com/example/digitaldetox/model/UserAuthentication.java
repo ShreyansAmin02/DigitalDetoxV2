@@ -12,7 +12,6 @@ public class UserAuthentication {
 
     }
 
-    //need to redo lol
     public boolean isEmailValid(String email) {
         if (email.contains("@")) {
             return true;
@@ -32,7 +31,6 @@ public class UserAuthentication {
         if (password.length() < 8) {
             return false;
         }
-
         else {
             for (int i = 0; i < passwordLength; i++) {
                 currentChar = password.charAt(i);

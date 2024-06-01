@@ -1,10 +1,9 @@
-package com.example.digitaldetox.tracker;
+package com.example.digitaldetox.model.Screen_Tracker;
 
 public class App {
 
     private String name;
     private long app_time;
-    private int overall_time;
     private int accountID;
 
     public App(int accountID, String name, long app_time) {
@@ -12,8 +11,6 @@ public class App {
         this.app_time = app_time;
         this.accountID = accountID;
     }
-
-
     public int getAccountID() {
         return accountID;
     }
@@ -27,10 +24,5 @@ public class App {
     public void setName(String name) {
         this.name = name;
     }
-
-    public void setTime(int time) {
-        this.app_time = time;
-    }
-
 
 }

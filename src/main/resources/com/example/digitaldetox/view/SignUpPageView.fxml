@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.layout.VBox?>
 <GridPane alignment="CENTER" hgap="10" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" style="-fx-border-color: #FFA500; -fx-border-width: 5px; -fx-border-radius: 5px; -fx-background-radius: 5;" vgap="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.digitaldetox.controller.LoginController">
 <padding>
     <Insets bottom="25" left="25" right="25" top="25" />
@@ -36,12 +37,14 @@
     <TextField fx:id="usernameTextField" maxWidth="150" GridPane.columnIndex="2" GridPane.rowIndex="1" />
     <PasswordField fx:id="passwordTextField" maxWidth="150" GridPane.columnIndex="2" GridPane.rowIndex="2" />
     <PasswordField fx:id="confirmPasswordTextField" maxWidth="150" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-    <Label fx:id="signupStatus" maxWidth="150" prefHeight="18.0" prefWidth="101.0" style="-fx-text-fill: #ff0000" wrapText="true" GridPane.rowIndex="4" />
-    <HBox alignment="CENTER" spacing="20" />
 
-      
+    <HBox alignment="CENTER" spacing="20" />
+    <VBox GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.columnSpan="2" GridPane.rowSpan="4">
+        <Label fx:id="signupStatus" maxWidth="150" style="-fx-text-fill: #ff0000" wrapText="true"/>
+    </VBox>
+
              <Button fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" onAction="#onBackButtonClick" prefHeight="26.0" prefWidth="134.0" style="-fx-background-color: red; -fx-border-color: #8B0000; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Back" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-   
+
           <Button fx:id="signUpToAccountButton" alignment="CENTER" contentDisplay="CENTER" onAction="#onSignUpToAccountClick" prefHeight="26.0" prefWidth="101.0" style="-fx-background-color: green; -fx-border-color: #006400; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="Sign Up" textFill="WHITE" GridPane.rowIndex="9" />
     <columnConstraints>
       <ColumnConstraints />

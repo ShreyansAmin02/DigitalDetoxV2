@@ -57,11 +57,4 @@ public class User {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAccountDetails() {
-        return "Username: " + username + "\n" + "Password: " + password + "Email: " + email + "\n";
-    }
 }

@@ -1,4 +1,4 @@
-package FeatureTimer;
+package com.example.digitaldetox.model.Timer;
 
 import javafx.application.Platform;
 import javafx.scene.control.Alert;

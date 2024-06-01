@@ -31,7 +31,7 @@
         <Button fx:id="homeBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: white;">
             <graphic>
                 <ImageView fitHeight="38.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@image/HomeIcon.png"/>
+                    <Image url="@../image/HomeIcon.png"/>
                 </ImageView>
             </graphic>
             <cursor>
@@ -41,7 +41,7 @@
         <Button fx:id="profileBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: white;">
             <graphic>
                 <ImageView fitHeight="38.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@image/ProfileIcon.png"/>
+                    <Image url="@../image/ProfileIcon.png"/>
                 </ImageView>
             </graphic>
             <cursor>
@@ -51,7 +51,7 @@
         <Button fx:id="statsBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: white;" onAction="#onScreentimeButtonClick">
             <graphic>
                 <ImageView fitHeight="38.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@image/StatsIcon.png" />
+                    <Image url="@../image/StatsIcon.png" />
                 </ImageView>
             </graphic>
             <cursor>
@@ -61,7 +61,7 @@
         <Button fx:id="timerBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: white;" onAction="#handleTimerButtonClick">
             <graphic>
                 <ImageView fitHeight="38.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@image/ClockIcon.png"/>
+                    <Image url="@../image/ClockIcon.png"/>
                 </ImageView>
             </graphic>
             <cursor>
@@ -71,7 +71,7 @@
         <Button fx:id="scheduleBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: white;">
             <graphic>
                 <ImageView fitHeight="38.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@image/ScheduleIcon.png"/>
+                    <Image url="@../image/ScheduleIcon.png"/>
                 </ImageView>
             </graphic>
             <cursor>
@@ -81,7 +81,7 @@
         <Button fx:id="goalsBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: white;" onAction ="#handleGoalsButtonClick">
             <graphic>
                 <ImageView fitHeight="38.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@image/GoalsIcon.png"/>
+                    <Image url="@../image/GoalsIcon.png"/>
                 </ImageView>
             </graphic>
             <cursor>
@@ -91,7 +91,7 @@
         <Button fx:id="settingsBtn" mnemonicParsing="false" prefHeight="38.0" prefWidth="57.0" style="-fx-background-color: white;">
             <graphic>
                 <ImageView fitHeight="38.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
-                    <Image url="@image/SettingsIcon.png"/>
+                    <Image url="@../image/SettingsIcon.png"/>
                 </ImageView>
             </graphic>
             <cursor>
@@ -105,7 +105,7 @@
         </font>
     </Text>
     <ImageView fitHeight="42.0" fitWidth="38.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-        <Image url="@image/ProfilePic.png"/>
+        <Image url="@../image/ProfilePic.png"/>
     </ImageView>
     <ListView layoutX="350.0" layoutY="54.0" prefHeight="171.0" prefWidth="200.0" style="-fx-background-color: #87CEEB; -fx-border-radius: 10; -fx-background-radius: 10;" />
     <Text layoutX="408.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Daily Challenges" />

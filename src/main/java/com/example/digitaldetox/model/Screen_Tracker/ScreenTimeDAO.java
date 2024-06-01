@@ -1,25 +1,32 @@
-package com.example.digitaldetox.tracker;
+package com.example.digitaldetox.model.Screen_Tracker;
 
 import com.example.digitaldetox.model.DatabaseConnection;
-import com.example.digitaldetox.model.UserSession;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ScreenTimeDAO implements IScreenTimeDAO {
+public class ScreenTimeDAO {
     private Connection connection;
-    public app_tracker tracker;
-    public screentime_tracker overall_tracker;
+    app_tracker tracker;
+    screentime_tracker overall_tracker;
     public ScreenTimeDAO() {
         connection = DatabaseConnection.getInstance();
         createTable();
+    }
+    public void initialiseTrackers() {
         tracker = new app_tracker();
         overall_tracker = new screentime_tracker();
     }
 
+    public void beginTracking() {
+        tracker.initialise();
+    }
 
+    public void resetTrackers() {
+        tracker.reset();
+    }
 
     public void createTable() {
         try {
@@ -108,7 +115,7 @@ public class ScreenTimeDAO implements IScreenTimeDAO {
             PreparedStatement statement = connection.prepareStatement("UPDATE screentime " +
                     "SET overall_screentime = overall_screentime + ? " +
                     "WHERE accountID = ?");
-            statement.setLong(1, tracker.overall_tracker.getTotalTime());
+            statement.setLong(1, tracker.overall_tracker.getTotalTime()/1000);
             statement.setInt(2, accountID);
             statement.executeUpdate();
         } catch (SQLException ex) {
@@ -141,11 +148,11 @@ public class ScreenTimeDAO implements IScreenTimeDAO {
 
     public void addAppScreentime(int accountID) {
         List<App> preSetApps = Arrays.asList(
-                new App(accountID, "Facebook", tracker.getFacebookTime()),
-                new App(accountID, "Instagram", tracker.getInstagramTime()),
-                new App(accountID, "YouTube", tracker.getYoutubeTime()),
-                new App(accountID, "Reddit", tracker.getRedditTime()),
-                new App(accountID, "TikTok", tracker.getTikTokTime())
+                new App(accountID, "Facebook", tracker.getFacebookTime()/1000),
+                new App(accountID, "Instagram", tracker.getInstagramTime()/1000),
+                new App(accountID, "YouTube", tracker.getYoutubeTime()/1000),
+                new App(accountID, "Reddit", tracker.getRedditTime()/1000),
+                new App(accountID, "TikTok", tracker.getTikTokTime()/1000)
         );
 
 
@@ -216,7 +223,3 @@ public class ScreenTimeDAO implements IScreenTimeDAO {
 
 
 }
-
-
-
-
